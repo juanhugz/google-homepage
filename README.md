@@ -1,0 +1,1 @@
+This project is about applying all the basic skills acquired from the first part of the Foundations course in the Odin Project
