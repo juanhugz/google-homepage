@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<style>
+    body{
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: 3;
+        grid-template-areas: "header" "main" "footer";
+
+    }
+    header{
+        grid-area: header;
+    }
+    
+    main{
+        grid-area: main;
+        grid-template-rows: 3;
+        grid-template-areas: "googlelogo googlelogo" "mainsearchbox mainsearchbox" "boutonrecherche boutonchance";
+    }
+    .googlelogo{
+        grid-area: googlelogo;
+    }
+    .mainsearchbox{
+        grid-area: mainsearchbox;
+    }
+    .boutonrecherche{
+        grid-area: boutonrecherche;
+    }
+    .boutonchance{
+        grid-area: boutonchance;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+    .simplelien:hover{
+        text-decoration: underline;
+    }
+    #connexion{
+        background-color: hsl(240, 85%, 55%);
+        color: white;
+        border-radius: 6.18px;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 1;
+    }
+    li a{
+        display:inline-block;
+        padding: 14px 16px;
+        background-color:white;
+    }
+    button{
+        display: inline-flex;
+        background: transparent;
+        color: black;
+        justify-self: center;
+        padding: 10px 40px;
+        border-radius: 6.18px;
+    }
+    button:hover{
+        box-shadow: 0 1px 1px rgba(0,0,0,0.2),0 2px 2px 0 rgba(0,0,0,0.19);
+    }
+</style>
+<html>
+
+    <body>
+        <header>
+            <ul>
+                <li><a class="simplelien">Gmail</a></li>
+                <li><a class="simplelien">Images</a></li>
+                <li><a id="connexion">Connexion</a></li>
+            </ul>
+        </header>
+        <main>
+            <div>
+                <img name="googlelogo" id="googlelogo" class="googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Logo Google">
+            </div>
+            <div>
+                <input type="search" name="mainsearchbox" id="mainsearchbox" class="mainsearchbox" placeholder="Search">        
+            </div>
+            <div>
+                <button id="boutonrecherche" class="boutonrecherche">Recherche Google</button>
+                <button id="boutonchance" class="boutonchance">J'ai de la chance</button>
+            </div>                 
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>
