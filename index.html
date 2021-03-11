@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <style>
     body{
-        display:grid;
-        grid-template-columns: auto;
-        grid-template-rows: 3;
-        grid-template-areas: "header" "main" "footer";
-
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
     }
-    header{
-        grid-area: header;
+    nav{
+        text-align: right;
+        padding: auto;
     }
-    
-    main{
-        grid-area: main;
-        grid-template-rows: 3;
-        grid-template-areas: "googlelogo googlelogo" "mainsearchbox mainsearchbox" "boutonrecherche boutonchance";
+    ul{
+        list-style: none;
     }
-    .googlelogo{
-        grid-area: googlelogo;
+    a{
+        text-decoration: none;
+        color: black;
+        margin-left: 10px;
     }
-    .mainsearchbox{
-        grid-area: mainsearchbox;
-    }
-    .boutonrecherche{
-        grid-area: boutonrecherche;
-    }
-    .boutonchance{
-        grid-area: boutonchance;
-    }
-
-    footer{
-        grid-area: footer;
-    }
-    .simplelien:hover{
+    a:hover{
         text-decoration: underline;
     }
-    #connexion{
-        background-color: hsl(240, 85%, 55%);
+    .connexion{
+        background-color: #4285f4;
         color: white;
         border-radius: 6.18px;
     }
-    ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 1;
+    main{
+        text-align: center;
+        margin-top: 30px;
+        flex: 1;
     }
-    li a{
-        display:inline-block;
-        padding: 14px 16px;
-        background-color:white;
+    .logo{
+        padding-top: 100px;
+    }
+    .recherche{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .boutons{
+        margin-top: 30px;
+        position: relative;
     }
     button{
         display: inline-flex;
@@ -66,20 +59,27 @@
 
     <body>
         <header>
-            <ul>
-                <li><a class="simplelien">Gmail</a></li>
-                <li><a class="simplelien">Images</a></li>
-                <li><a id="connexion">Connexion</a></li>
-            </ul>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Gmail</a>
+                            <a href="#">Images</a>
+                            <a href="#" class="carre">Carré</a>
+                            <a href="#" class="connexion">Connexion</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>            
         </header>
         <main>
-            <div>
+            <div class="logo">
                 <img name="googlelogo" id="googlelogo" class="googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Logo Google">
             </div>
-            <div>
+            <div class="recherche">
                 <input type="search" name="mainsearchbox" id="mainsearchbox" class="mainsearchbox" placeholder="Search">        
             </div>
-            <div>
+            <div class="boutons">
                 <button id="boutonrecherche" class="boutonrecherche">Recherche Google</button>
                 <button id="boutonchance" class="boutonchance">J'ai de la chance</button>
             </div>                 
